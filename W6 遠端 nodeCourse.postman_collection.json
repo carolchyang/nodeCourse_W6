@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "e5ad12cd-270a-44c4-a42b-a62974227337",
+		"name": "W6 遠端 nodeCourse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9557023"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "取得所有貼文",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTFhMDViZTlhYTU2ZjljNTJiMTQ5ZiIsImlhdCI6MTY1NDc2NzY2NywiZXhwIjoxNjU1MzcyNDY3fQ.RWl_262fEbfpxR8iPsnB5_4ttanhSoGZAyNiNXipnuQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://floating-anchorage-48826.herokuapp.com/posts?sort=asc",
+							"protocol": "https",
+							"host": [
+								"floating-anchorage-48826",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "asc"
+								},
+								{
+									"key": "keyword",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "取得單一貼文",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTE4MjI1OGZlZGQ5MDUwOTdiOGU2OSIsImlhdCI6MTY1NDc1MjEzNCwiZXhwIjoxNjU1MzU2OTM0fQ.5MzG_wgiMpjvZw2Lo3kFt2g9rveH4ESUlp-VAfWDn58",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://floating-anchorage-48826.herokuapp.com/post/:id",
+							"protocol": "https",
+							"host": [
+								"floating-anchorage-48826",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"post",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "62a1c07c262f6574289cf592"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "新增貼文",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTFhMDViZTlhYTU2ZjljNTJiMTQ5ZiIsImlhdCI6MTY1NDc2NzY2NywiZXhwIjoxNjU1MzcyNDY3fQ.RWl_262fEbfpxR8iPsnB5_4ttanhSoGZAyNiNXipnuQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"貼文內容3\",\r\n    \"image\": \"https://images.unsplash.com/photo-1618988727281-8d54f5d32932?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1177&q=80\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://floating-anchorage-48826.herokuapp.com/post",
+							"protocol": "https",
+							"host": [
+								"floating-anchorage-48826",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "刪除單一貼文",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTFhMDViZTlhYTU2ZjljNTJiMTQ5ZiIsImlhdCI6MTY1NDc2NzY2NywiZXhwIjoxNjU1MzcyNDY3fQ.RWl_262fEbfpxR8iPsnB5_4ttanhSoGZAyNiNXipnuQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://floating-anchorage-48826.herokuapp.com/post/:id",
+							"protocol": "https",
+							"host": [
+								"floating-anchorage-48826",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"post",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "62a1c07c262f6574289cf592"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "註冊",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"gg\",\r\n    \"email\": \"g@gmail.com\",\r\n    \"password\": \"g12345678\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://floating-anchorage-48826.herokuapp.com/user/sign_up",
+							"protocol": "https",
+							"host": [
+								"floating-anchorage-48826",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"sign_up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "登入",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"n@gmail.com\",\r\n    \"password\": \"n12345678\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://floating-anchorage-48826.herokuapp.com/user/sign_in",
+							"protocol": "https",
+							"host": [
+								"floating-anchorage-48826",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"sign_in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "重設密碼",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTE4MjI1OGZlZGQ5MDUwOTdiOGU2OSIsImlhdCI6MTY1NDc1MjEzNCwiZXhwIjoxNjU1MzU2OTM0fQ.5MzG_wgiMpjvZw2Lo3kFt2g9rveH4ESUlp-VAfWDn58",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"n12345678\",\r\n    \"confirmPassword\": \"n12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://floating-anchorage-48826.herokuapp.com/user/updatePassword",
+							"protocol": "https",
+							"host": [
+								"floating-anchorage-48826",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "取得個人資料",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTFhMDViZTlhYTU2ZjljNTJiMTQ5ZiIsImlhdCI6MTY1NDc2NzY2NywiZXhwIjoxNjU1MzcyNDY3fQ.RWl_262fEbfpxR8iPsnB5_4ttanhSoGZAyNiNXipnuQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://floating-anchorage-48826.herokuapp.com/user/profile",
+							"protocol": "https",
+							"host": [
+								"floating-anchorage-48826",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "更新個人資料",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTFhMDViZTlhYTU2ZjljNTJiMTQ5ZiIsImlhdCI6MTY1NDc2NzY2NywiZXhwIjoxNjU1MzcyNDY3fQ.RWl_262fEbfpxR8iPsnB5_4ttanhSoGZAyNiNXipnuQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"修改n\",\r\n    \"gender\": \"female\",\r\n    \"photo\": \"https://images.unsplash.com/photo-1618988727281-8d54f5d32932?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1177&q=80\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://floating-anchorage-48826.herokuapp.com/user/profile",
+							"protocol": "https",
+							"host": [
+								"floating-anchorage-48826",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
